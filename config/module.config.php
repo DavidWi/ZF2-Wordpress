@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    'wordpress_folder_name' => 'wordpress',
     'router' => array(
         'router_class' => 'Wordpress\Router\Http\TreeRouteStack',
         'defaultRoute' => array(
@@ -13,8 +14,8 @@ return array(
         ),
     ),
     'controllers' => array(
-        'invokables' => array(
-            'Wordpress\Controller\Index' => 'Wordpress\Controller\IndexController'
+        'factories' => array(
+            'Wordpress\Controller\Index' => 'Wordpress\Controller\Factory\IndexController'
         ),
     ),
     'view_manager' => array(

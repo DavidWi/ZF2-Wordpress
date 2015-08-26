@@ -10,11 +10,32 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    /**
+     *
+     * @var string
+     */
+    protected $wordpressFolderName = 'wordpress';
     
     public function indexAction()
     {
         // Choose empty layout for Wordpress-Pages
         $this->layout('layout/empty');
-        return new ViewModel(array());
+        return new ViewModel(
+                array(
+                    'wordpressFolderName' => $this->wordpressFolderName
+                )
+                );
     }
+    
+    /**
+     * 
+     * @param string $wordpressFolderName
+     * @return \Wordpress\Controller\IndexController
+     */
+    function setWordpressFolderName($wordpressFolderName) {
+        $this->wordpressFolderName = $wordpressFolderName;
+        return $this;
+    }
+
+
 }

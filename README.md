@@ -7,7 +7,7 @@ It's catching all unmatched Requests and directs them to Wordpress.
 
 ## Make it working:
 
-1. Move your wordpress-Folder to your_project_path/public. //MyTODO integrate the Foldername to Config
+1. Move your wordpress-Folder to your_project_path/public. If that folders name is not wordpress, please configure it in module/Wordpress/config/module.config.php
 
 2. In your Wordpress-Database go to wp_options and make sure that the option "siteurl" is set to "http://your.domain/wordpress"
 
