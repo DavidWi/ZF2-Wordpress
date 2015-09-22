@@ -1,13 +1,16 @@
 <?php
+
 $path = realpath(
-        __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR
-        .'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR
-        .'public'.DIRECTORY_SEPARATOR.$this->wordpressFolderName
+        __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+        . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+        . 'public' . DIRECTORY_SEPARATOR . $this->wordpressFolderName
 );
-if ($path && file_exists($path.DIRECTORY_SEPARATOR.'index.php')) {
+if ($path && file_exists($path . DIRECTORY_SEPARATOR . 'index.php')) {
     // Include index.php of Wordpress to process Wordpress-Request
-    include ($path.DIRECTORY_SEPARATOR.'index.php');
-} else {
+    include ($path . DIRECTORY_SEPARATOR . 'index.php');
+    } else {
     // Error
-    throw new \Exception("Error finding index.php-File of Wordpress. Please check your configuration in module/Wordpress/config/module.config.php.");
+    throw new \Exception(
+            "Error: Could not find index.php-File of Wordpress. Please check your folder-configuration in module/Wordpress/config/module.config.php."
+            );
 }

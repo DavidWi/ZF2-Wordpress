@@ -11,7 +11,7 @@ use Zend\View\Model\ViewModel;
 class IndexController extends AbstractActionController
 {
     /**
-     *
+     * Name of the Wordpressfolder - can be configured in module.config.php
      * @var string
      */
     protected $wordpressFolderName = 'wordpress';
