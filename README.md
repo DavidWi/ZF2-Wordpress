@@ -3,7 +3,7 @@ This is a Wordpress Module for Zend Framework 2. It integrates Wordpress in a Ze
 
 ## How it works:
 It's catching all unmatched Requests and directs them to Wordpress.
-// MyTODO Alternativ sollte es möglich sein, die Wordpress-Routen manuell zu pflegen
+Alternatively it's possible to configure a list of urls that should be resolved by Wordpress.
 
 ## Make it working:
 
@@ -19,3 +19,9 @@ It's catching all unmatched Requests and directs them to Wordpress.
     ),
 ```
 **You're done!**
+
+## Configuration (everything should work without configuration but you can adjust it to perfectly fit your needs)
+Choose between the 2 prepared routes in the module.config.php:
+wordpressCatchAll
+wordpressCatchList
+and delete the other one.
